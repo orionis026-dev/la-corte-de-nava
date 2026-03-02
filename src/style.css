@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-ptah-obsidian text-white;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .egyptian-border {
+    @apply border-2 border-nava-gold rounded-lg;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  
+  .holographic-text {
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  .agent-panel {
+    @apply egyptian-border bg-ptah-obsidian/90 backdrop-blur-md p-6;
+  }
+}
