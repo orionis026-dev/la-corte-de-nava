@@ -8,8 +8,8 @@ import { SeshatPapyrus } from './entities/SeshatPapyrus';
 import { PtahTemple } from './entities/PtahTemple';
 import { TavilyMirror } from './entities/TavilyMirror';
 import { JCodeMunchTree } from './entities/JCodeMunchTree';
-import { useAgentStore } from '../../store/agentStore';
-import { Agent } from '../../types/agents';
+import { useAgentStore } from '../store/agentStore';
+import type { Agent } from '../types/agents';
 
 // Cámara animada que se mueve al hacer click
 function AnimatedCamera() {
@@ -69,6 +69,7 @@ function CourtEntity({
   return (
     <group
       position={agent.position}
+      scale={hovered ? 1.1 : 1}
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
       onClick={() => {
@@ -83,11 +84,11 @@ function CourtEntity({
 
 export function Court() {
   const { agents } = useAgentStore();
-  const nava = agents.find((a) => a.id === 'nava');
-  const seshat = agents.find((a) => a.id === 'seshat');
-  const ptah = agents.find((a) => a.id === 'ptah');
-  const tavily = agents.find((a) => a.id === 'tavily');
-  const jcodemunch = agents.find((a) => a.id === 'jcodemunch');
+  const nava = agents.find((a: Agent) => a.id === 'nava');
+  const seshat = agents.find((a: Agent) => a.id === 'seshat');
+  const ptah = agents.find((a: Agent) => a.id === 'ptah');
+  const tavily = agents.find((a: Agent) => a.id === 'tavily');
+  const jcodemunch = agents.find((a: Agent) => a.id === 'jcodemunch');
 
   return (
     <Canvas

@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { AgentState } from '../types/agents';
+import type { AgentState } from '../types/agents';
 
 const initialAgents = [
   {

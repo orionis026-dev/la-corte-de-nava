@@ -77,6 +77,7 @@ export function NavaPyramid({ isHovered, onClick }: NavaPyramidProps) {
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
+            args={[particlePositions, 3]}
             count={50}
             array={particlePositions}
             itemSize={3}

@@ -93,6 +93,7 @@ export function PtahTemple({ isHovered, onClick }: PtahTempleProps) {
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
+            args={[codePositions, 3]}
             count={30}
             array={codePositions}
             itemSize={3}
