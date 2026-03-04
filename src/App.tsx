@@ -1,5 +1,6 @@
 import { Court } from './components/Court';
 import { AgentPanel } from './components/ui/AgentPanel';
+import { TemplePyramidLanding } from './components/ui/TemplePyramidLanding';
 import { useAgentPolling } from './hooks/useAgentPolling';
 import { useAgentStore } from './store/agentStore';
 
@@ -28,6 +29,8 @@ function App() {
           </p>
         </div>
       )}
+
+      {!isZoomed && <TemplePyramidLanding />}
 
       {/* Instrucciones */}
       {!isZoomed && (

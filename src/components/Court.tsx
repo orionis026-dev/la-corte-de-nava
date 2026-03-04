@@ -8,6 +8,8 @@ import { SeshatPapyrus } from './entities/SeshatPapyrus';
 import { PtahTemple } from './entities/PtahTemple';
 import { TavilyMirror } from './entities/TavilyMirror';
 import { JCodeMunchTree } from './entities/JCodeMunchTree';
+import { EgyptianParticles } from './EgyptianParticles';
+import { Nebula } from './Nebula';
 import { useAgentStore } from '../store/agentStore';
 import type { Agent } from '../types/agents';
 
@@ -96,6 +98,8 @@ export function Court() {
       style={{ width: '100vw', height: '100vh' }}
     >
       <EgyptianSpace />
+      <Nebula />
+      <EgyptianParticles />
       
       {/* Iluminación */}
       <ambientLight intensity={0.3} color="#4a4a6a" />
