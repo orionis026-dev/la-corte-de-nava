@@ -1,4 +1,4 @@
-import { useAgentStore } from '../store/agentStore';
+import { useAgentStore } from '../../store/agentStore';
 
 export function AgentPanel() {
   const { selectedAgent, isZoomed, setZoomed, setSelectedAgent } = useAgentStore();

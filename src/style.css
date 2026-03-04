@@ -1,6 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-nava-gold: #FFD700;
+  --color-nava-electric: #00D4FF;
+  --color-seshat-papyrus: #F5E6C8;
+  --color-seshat-turquoise: #40E0D0;
+  --color-ptah-obsidian: #1A1A2E;
+  --color-ptah-copper: #B87333;
+  --color-tavily-amber: #FFBF00;
+  --color-tavily-white: #FFFFFF;
+  --color-jcodemunch-emerald: #50C878;
+  --color-jcodemunch-violet: #8A2BE2;
+  --font-family-hieroglyph: 'Cinzel', serif;
+}
 
 @layer base {
   body {
@@ -20,6 +32,7 @@
   }
   
   .agent-panel {
-    @apply egyptian-border bg-ptah-obsidian/90 backdrop-blur-md p-6;
+    @apply border-2 border-nava-gold rounded-lg bg-ptah-obsidian/90 backdrop-blur-md p-6;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
   }
 }
